@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  --header1: calc(2rem + 1vw);
+  --header2: calc(3.5rem + 1vw);
+  --header3: calc(3rem + 1vw);
+  --header4: calc(2.4rem + 1vw);
+  --text: calc(1.5rem + 1vw);
+  --big: calc(6rem + 1vw);
+  --special-color: #906272;
+  --background-color: #414141;
+  --gray-text: #525252;
+  --text-color: #fff;
+  scroll-behavior: smooth;
+}
+
+
+@font-face {
+  font-family: "Ruhl";
+  src: url("photography/FrankRuhlLibre-Regular.ttf");
+}
+@font-face {
+  font-family: "Ruhl Medium";
+  src: url("photography/FrankRuhlLibre-Medium.ttf");
+}
+@font-face {
+  font-family: "Vibes";
+  src: url("GreatVibes-Regular.ttf");
+}
+h1 {
+  font-family: "Vibes";
+  font-size: calc(2.6rem 1vw);
+}
+h1 {
+  font-size: 2.6rem;
+}
+li,p,button,input,label {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+h4,h5 {
+  font-size: 2.8rem;
+}
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+ul li {
+  text-decoration: none;
+  list-style: none;
+}
+
+button {
+  padding: 1.6rem 4rem;
+  background-color: white;
+  color: rgb(179, 9, 9);
+  border: none;
+  font-size: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+}
+button:hover {
+  background-color: rgb(190, 34, 34);
+  color: white;
+}
+
+/*------------------------------nav section with hero--------------------------*/
+.main-head {
+  background-color: white;
+  position: sticky;
+  top: 0px;
+  border-bottom: 1px solid rgb(209, 204, 204);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+nav {
+  display: flex;
+  width: 90%;
+  min-height: 10vh;
+  padding: 1rem;
+  margin: 0 auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.logo {
+  flex: 1 1 40rem;
+  font-family: "Pattaya";
+  color: rgb(248, 82, 82);
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
+    url(imgs/img1.jpg);
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: aliceblue;
+}
+.hero h2 {
+  color: rgb(247, 246, 245);
+}
+.hero h3 {
+  padding: 5rem;
+  color: rgb(225, 223, 223);
+}
+
+.arrival {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url(imgs/img3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.arrival-head {
+  width: 90%;
+  /* background-color: lightblue; */
+  margin: 0 auto;
+}
+.arrival-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline rgb(163, 2, 2);
+  text-decoration-thickness: 0.5rem;
+  color: rgb(247, 246, 245);
+}
+
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-text {
+  flex: 2 1 40rem;
+  justify-content: space-around;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.about-text div {
+  padding: 3rem 8rem;
+}
+.about-text h3 {
+  padding: 2rem 0rem;
+  font-family: "Ruhl Medium";
+}
+.about-text h2 {
+  letter-spacing: 1.8rem;
+  padding: 4rem;
+  font-family: "Vibes";
+}
+.about-text p {
+  font-weight: normal;
+  font-size: 2.2rem;
+}
+.about-img {
+  flex: 1 1 40rem;
+  position: relative;
+}
+.about-img h5 {
+  letter-spacing: 2rem;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  /* to center the the text title of image....minimal */
+  transform: translate(-50%, 20%);
+}
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ------------------------------styling gallery----------------------- */
+.gallery-2 {
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+}
+
+.gallery-2 img{
+  height: 60%;
+}
+
+/* ---------------------------------styling contact form--------------------------- */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 90vh;
+}
+.form-wrapper {
+  flex: 3 1 40rem;
+}
+.form-wrapper h2 {
+  padding: 5rem 0rem;
+}
+.contact img {
+  flex: 1 1 40rem;
+  width: 100%;
+  height: 100vh;
+}
+.form-wrapper span {
+  font-size: var(--big);
+  color: var(--special-color);
+}
+.form-wrapper label {
+  display: block;
+}
+.form-wrapper input {
+  display: block;
+  margin: 3rem 0rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: none;
+  padding: 1rem;
+}
+.form-wrapper button {
+  padding: 1rem 8rem;
+  background-color: var(--special-color);
+  color: var(--text-color);
+  border: none;
+  width: 100%;
+}
+
+/* ---------------------------------styling the footer----------------------------- */
+footer {
+  display: flex;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 3rem 5%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer h4 {
+  flex: 5 1 40rem;
+  font-size: calc(1.8rem + 1vw);
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
