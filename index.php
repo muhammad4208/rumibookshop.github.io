@@ -1,0 +1,134 @@
+<?php  
+session_start();
+
+if(!isset($_SESSION['username'])){
+header("Location: http://localhost:8080/book/login.php");
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bookstore</title>
+    <link rel="stylesheet" href="bookstore.css" />
+  </head>
+
+  <body>
+    <header class="main-head">
+      <nav>
+        <h1 class="logo">rumi</h1>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#gallery-2">Books</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <span><a href="logout.php">Logout</a></span>
+        <span style="margin:5px;font-size:15px"><?php echo $_SESSION['username']; ?></span>
+      </nav>
+    </header>
+
+    <!----------------------------------hero section--------------------------->
+    <section class="hero" id="hero">
+      <h2>Rumi bookstore</h2>
+      <h3>
+        a room without book is like a soul without body<br />still waiting?
+      </h3>
+      <button>buy now</button>
+    </section>
+
+    <!-- ---------------------------------new arrival books---------------------- -->
+    <section class="arrival">
+      <header class="arrival-head">
+        <h2>Here are our new arrival</h2>
+      </header>
+    </section>
+
+    <!-- ------------------------------special and most sales books----------- -------->
+    <section class="about" id="about">
+      <div class="about-img">
+        <h5>we suggest</h5>
+        <img src="imgs/img2.jpg" alt="most sales book" />
+      </div>
+      <div class="about-text flex">
+        <h2>most sales books</h2>
+        <div class="stories">
+          <h3>The Kite Runner</h3>
+          <p>
+            The Kite Runner is the first novel by Afghan-American author Khaled Hosseini. Published in 2003 by 
+            Riverhead Books, it tells the story of Amir, a young boy from the Wazir Akbar Khan district of Kabul.
+          </p>
+        </div>
+        <div class="stories">
+          <h3>Ghost Wars</h3>
+          <p>
+            The Secret History of the CIA, Afghanistan, and Bin Laden, from the Soviet Invasion to September 10, 
+            2001, abbreviated as Ghost Wars, is a book written by Steve Coll, published in 2004 by Penguin Press. 
+            It won the 2005 Pulitzer Prize for General Non-Fiction.
+          </p>
+        </div>
+        <div class="stories">
+          <h3>A Thousand Splendid Suns</h3>
+          <p>
+            A Thousand Splendid Suns is a 2007 novel by Afghan-American author Khaled Hosseini, following the huge 
+            success of his bestselling 2003 debut The Kite Runner. Mariam, an illegitimate teenager from Herat, is 
+            forced to marry a shoemaker from Kabul after a family tragedy
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------gallery section----------------------- -->
+    <div class="gallery-2" id="gallery-2">
+      <span style="">
+      <img src="imgs/img10.jpg" alt=""/>
+         <span style="font-size:12px;margin-left:20px;font-weight:600"> Price 70$</span>
+      </span>
+      <span>
+      <img src="imgs/img11.jpg" alt=""/>
+      <span style="font-size:12px;margin-left:20px;font-weight:600"> Price 20$</span>
+      </span>
+      <span>
+      <img src="imgs/img12.jpg" alt=""/>
+      <span style="font-size:12px;margin-left:20px;font-weight:600"> Price 100$</span>
+      </span>
+      <span>
+      <img src="imgs/img13.jpg" alt=""/>
+      <span style="font-size:12px;margin-left:20px;font-weight:600"> Price 100$</span>
+      </span>
+      <span>
+      <img src="imgs/img15.jpg" alt=""/>
+      <span style="font-size:12px;margin-left:20px;font-weight:600"> Price 90$</span>
+      </span>
+      <span>
+      <img src="imgs/img16.jpg" alt=""/>
+      <span style="font-size:12px;margin-left:20px;font-weight:600"> Price 70$</span>
+      </span>
+    </div>
+
+    <!-- -----------------------------contact section-------------------------- -->
+    <section class="contact" id="contact">
+      <div class="form-wrapper flex">
+        <h2>
+          get in <br />
+          <span>touch</span>
+        </h2>
+        <form>
+          <label for="email">your email</label>
+          <input type="email" id="email required" />
+          <button type="submit">submit</button>
+        </form>
+      </div>
+      <img src="imgs/contact3.jpg" />
+    </section>
+  </main>
+
+  <!-- ----------------------------------footer section--------------------- -->
+  <footer>
+    <h4> <?php  echo $_SESSION['username']; ?> &copy; 2022</h4>
+  </footer>
+  </body>
+</html>

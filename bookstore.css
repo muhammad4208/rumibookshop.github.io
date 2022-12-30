@@ -3,8 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  font-size: 62.5%;
+:root{
   --header1: calc(2rem + 1vw);
   --header2: calc(3.5rem + 1vw);
   --header3: calc(3rem + 1vw);
@@ -15,9 +14,12 @@ html {
   --background-color: #414141;
   --gray-text: #525252;
   --text-color: #fff;
+
+}
+html {
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
-
 
 @font-face {
   font-family: "Ruhl";
@@ -31,6 +33,10 @@ html {
   font-family: "Vibes";
   src: url("GreatVibes-Regular.ttf");
 }
+
+
+
+
 h1 {
   font-family: "Vibes";
   font-size: calc(2.6rem 1vw);
@@ -70,7 +76,7 @@ button {
   font-size: 2rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 button:hover {
   background-color: rgb(190, 34, 34);
@@ -110,7 +116,7 @@ nav ul {
 
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
-    url(imgs/img1.jpg);
+    url(imgs/img1.jpg);             
   min-height: 90vh;
   background-size: cover;
   background-position: center;
